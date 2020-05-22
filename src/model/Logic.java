@@ -1,5 +1,50 @@
 package model;
 
+import java.util.LinkedList;
+
+import processing.core.PApplet;
+
 public class Logic {
+
+	private PApplet app;
+	private String[] textElements;
+	private String[] takeElements;
+	private LinkedList<Persona> listPersonas;
+
+	public Logic(PApplet app) {
+		this.app = app;
+		textElements = app.loadStrings("./../data/archive.txt");
+		listPersonas = new LinkedList<Persona>();
+		for(int i=0; i<textElements.length;i++) {
+			takeElements = textElements[i].split(":");
+			if(takeElements[0].contentEquals("sanas")) {
+				for(int j=0; j<Integer.parseInt(takeElements[1]);j++) {
+					listPersonas.add(new Sana(app, 250, 250, 7));
+				}
+			}
+			if(takeElements[0].contentEquals("infectadas")) {
+				for(int j=0; j<Integer.parseInt(takeElements[1]);j++) {
+					listPersonas.add(new Infectada(app, 250, 250, 7));
+				}
+			}
+			if(takeElements[0].contentEquals("recuperadas")) {
+				for(int j=0; j<Integer.parseInt(takeElements[1]);j++) {
+					listPersonas.add(new Recuperada(app, 250, 250, 7));
+				}
+			}
+		}
+		System.out.println(listPersonas.size());
+	}
+
+	public void createdElements() {
+		// TODO Auto-generated method stub
+		for (Persona persona : listPersonas) {
+			persona.draw();
+		}
+	}
+	
+	public void sortElements() {
+		
+	}
 
 }
