@@ -23,14 +23,16 @@ public class Main extends PApplet{
 		background(255);
 		controlador.paintElements();
 		
-		for(int i=0; i< controlador.listPersons().size(); i++) {
+		for(int i=0; i< 1; i++) {
 			int cantidad = 0;
 			if(controlador.listPersons().get(i).getType().contentEquals("sanas")) {
 				cantidad = controlador.listPersons().size();
+				controlador.listPersons().get(i).paintList(cantidad, (i*25)+25, (i*25)+500);
 			}
 			
 		}
-		controlador.listPersons().get(0).paintList(100, 50, 550);
+		
+		
 	}
 	
 	public void keyReleased() {
