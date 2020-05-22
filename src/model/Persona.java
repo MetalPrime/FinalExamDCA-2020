@@ -10,12 +10,14 @@ public abstract class Persona implements Runnable,Comparable<Persona>{
 	protected int tam;
 	protected int movX;
 	protected int movY;
+	protected String type;
 
-	public Persona(PApplet app,float posX,float posY,int tam) {
+	public Persona(PApplet app,float posX,float posY,int tam,String type) {
 		this.app = app;
 		this.posX = posX;
 		this.posY = posY;
 		this.tam = tam;
+		this.type = type;
 		this.movX = 1;
 		this.movY = 1;
 	}
@@ -32,6 +34,13 @@ public abstract class Persona implements Runnable,Comparable<Persona>{
 		
 		this.posX+=this.movX;
 		this.posY+=this.movY;
+	}
+	
+	public void paintList(int cantidad,int X,int Y) {
+		app.textSize(30);
+		app.fill(0);
+		app.text(this.type,50, 650);
+		app.text(cantidad,X,Y);
 	}
 	
 
@@ -107,6 +116,20 @@ public abstract class Persona implements Runnable,Comparable<Persona>{
 	 */
 	public void setMovY(int movY) {
 		this.movY = movY;
+	}
+
+	/**
+	 * @return the type
+	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	@Override
