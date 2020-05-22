@@ -30,7 +30,7 @@ public class Main extends PApplet{
 			}
 			
 		}
-		controlador.listPersons().get(99).paintList(100, 50, 650);
+		controlador.listPersons().get(0).paintList(100, 50, 550);
 	}
 	
 	public void keyReleased() {

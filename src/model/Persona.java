@@ -39,7 +39,7 @@ public abstract class Persona implements Runnable,Comparable<Persona>{
 	public void paintList(int cantidad,int X,int Y) {
 		app.textSize(30);
 		app.fill(0);
-		app.text(this.type,50, 650);
+		app.text(this.type,50, 500);
 		app.text(cantidad,X,Y);
 	}
 	
