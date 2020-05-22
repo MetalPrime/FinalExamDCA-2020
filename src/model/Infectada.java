@@ -12,7 +12,8 @@ public class Infectada extends Persona{
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
-		
+		app.fill(255,0,0);
+		app.ellipse(posX, posY, tam, tam);
 	}
 
 }

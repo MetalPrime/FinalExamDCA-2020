@@ -12,7 +12,7 @@ public class Main extends PApplet{
 	MainController controlador;
 	
 	public void settings() {
-		size(800,800);
+		size(600,600);
 	}
 	
 	public void setup() {
@@ -20,6 +20,7 @@ public class Main extends PApplet{
 	}
 	
 	public void draw() {
+		background(255);
 		controlador.paintElements();
 	}
 	

@@ -12,7 +12,8 @@ public class Sana extends Persona{
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
-		
+		app.fill(0,255,0);
+		app.ellipse(posX, posY, tam, tam);
 	}
 
 }

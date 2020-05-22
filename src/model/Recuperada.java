@@ -12,7 +12,8 @@ public class Recuperada extends Persona{
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
-		
+		app.fill(0,0,255);
+		app.ellipse(posX, posY, tam, tam);
 	}
 
 }

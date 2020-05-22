@@ -23,10 +23,10 @@ public abstract class Persona implements Runnable,Comparable<Persona>{
 	public abstract void draw();
 	
 	public void move() {
-		if(this.posX<=0 || this.posX>=800 ) {
+		if(this.posX<=0 || this.posX>=600 ) {
 			this.movX*=-1;
 		}
-		if(this.posY<=0 || this.posY>=800) {
+		if(this.posY<=0 || this.posY>=600) {
 			this.movY*=-1;
 		}
 		
